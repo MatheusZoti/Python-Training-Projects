@@ -19,6 +19,7 @@ for item in wordlist:
         r = requests.get(subpage)
         if r.status_code == 200:
             print(f"A página '{subpage}' existe!\n")
-    except requests.exceptions.RequestException as e:
-        print(f"Ocorreu um erro ao conectar à página '{subpage}': {e}\n")
-        continue
+            
+    except:
+        print(f"Ocorreu um erro ao conectar à página '{subpage}'\n")
+        break
